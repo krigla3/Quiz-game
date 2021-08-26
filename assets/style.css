@@ -47,3 +47,9 @@ h1 {
     background: green;
     border-radius: 50px;
 }
+
+.navigation:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
