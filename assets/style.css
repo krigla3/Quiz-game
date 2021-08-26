@@ -28,3 +28,22 @@ h1 {
     align-items: center;
     margin: 0 auto;
 }
+
+.home {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 80%;
+    color: white;
+    text-decoration: none;
+    background: green;
+    border-radius: 50px;
+}
