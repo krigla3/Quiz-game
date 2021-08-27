@@ -5,6 +5,7 @@ const solutions = Array.from(document.querySelectorAll('.solutionData'));
 const status = document.querySelector('#status');
 const resultNumber = document.querySelector('#result');
 const statusBarFull = document.querySelector('#statusBarFull');
+const answers = document.querySelectorAll('.answerBox');
 
 let currentInquiry = {};
 let correctAnswers = true;
@@ -104,11 +105,15 @@ getNewInquiry = () => {
     solutions.forEach(solution => {
         const number = solution.dataset['number'];
         solution.innerText =  currentInquiry['solution' + number];
+
+        
     })
 
     availableInquiries.splice(inquiryNumber, 1);
 
     correctAnswers = true;
+
+    
 };
 
  //event listener functionality for possible solutions in the quiz//
@@ -119,30 +124,44 @@ getNewInquiry = () => {
 
         correctAnswers  = false
         const selectedSolution = e.target
-        const selectedAnswer = selectedSolution.dataset['number']
+        const selectedAnswer = selectedSolution.dataset['number'];
 
-        let styleToApply = selectedAnswer ==  currentInquiry.answer ? 'right' : 'wrong'
+        let styleToApply = selectedAnswer ==  currentInquiry.answer ? 'right' : 'wrong';
 
         if(styleToApply === 'right') {
             incrementScore(MAX_SCORE)
         }
 
-        selectedSolution.parentElement.classList.add(styleToApply)
+        selectedSolution.parentElement.classList.add(styleToApply);
         
         setTimeout(() => {
-           selectedSolution.parentElement.classList.add(styleToApply)
-           getNewInquiry()
+           selectedSolution.parentElement.classList.remove(styleToApply);
+           getNewInquiry();
   
         }, 1000)
+
+       if(inquiryCount == 4) {
+           
+           myFunction() 
+       }
     })
 })
 
 incrementScore = num => {
-    result +=num
-    resultNumber.innerText = result
+    result +=num;
+    resultNumber.innerText = result;
+
+    
 }
 
+function myFunction() {
+    alert("Final score " + result) 
+
+  }
+
 startGame()
+
+
 
 
 

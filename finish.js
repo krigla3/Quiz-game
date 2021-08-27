@@ -1,5 +1,5 @@
-const endResult = document.querySelector('#endResulte')
-const mostRecentScore = localStorage.getItem('mostRecentScore')
+const endResult = document.querySelector('#endResult');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 
 
