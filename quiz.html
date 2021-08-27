@@ -7,29 +7,50 @@
     <link rel="stylesheet" href="assets//style.css">
 </head>
 <body id="quiz-page">
-    <div>
-        <div>
-            <div>
-                <div>
-                    <p>
-                        sample text
-                    </p>
-                    <div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <p>
-                       result
-                    </p>
-                    <h1>
-                        sample text
-                    </h1>
-                </div>
-            </div>
+    <div class="box-2">
+        <div id="quiz" class="justify-center flex-column">
+            
             <h1 id="inquiry">First question?</h1>
             <div class="answer-box">
-                <p class="solution-letter">A</p>
+                <p class="solution-letter">a)</p>
                 <p class="solution-data" data-number="1">Solution</p>
             </div>
+            <div class="answer-box">
+                <p class="solution-letter">b)</p>
+                <p class="solution-data" data-number="2">Solution</p>
+            </div>
+            <div class="answer-box">
+                <p class="solution-letter">c)</p>
+                <p class="solution-data" data-number="3">Solution</p>
+            </div>
+            <div class="answer-box">
+                <p class="solution-letter">d)</p>
+                <p class="solution-data" data-number="4">Solution</p>
+            </div>
+
+            <div id="score-display">
+                <div class="score-container">
+                    <p class="score-calculator">
+                        Score
+                    </p>
+                    <h1 class="score-text" id="result">
+                        0
+                    </h1>
+                </div>
+                <div class="score-container">
+                    <p id="status" class="score-calculator">
+                        Question
+                    </p>
+                    <div id="status-bar">
+                        <div id="status-bar-full"></div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>    
+            
             
