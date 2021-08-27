@@ -89,6 +89,16 @@ h1 {
     width: 100%;
 }
 
+/* Styling for right and wrong selection*/
+
+.right {
+    background: yellow;
+}
+
+.wrong{
+    background: red;
+}
+
 /* Styles for the score display */
 #scoreDisplay {
     justify-content: space-between;
