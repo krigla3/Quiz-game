@@ -53,7 +53,7 @@ h1 {
 
 /* Quiz page and solution field styling */
 
-#quiz-page {
+#quizPage {
     font-size: 150%;
     font-family: 'Acme', sans-serif;
     box-sizing: border-box;
@@ -62,7 +62,7 @@ h1 {
     color: white;
 }
 
-.answer-box {
+.answerBox {
     display: flex;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -73,39 +73,39 @@ h1 {
     font-size: 100%;
 }
 
-.answer-box:hover {
+.answerBox:hover {
     transition: 0.3s;
     transform: scale(1.05);
 
 }
 
-.solution-letter {
+.solutionLetter {
     padding: 10px;
     color: white;
 }
 
-.solution-data {
+.solutionData {
     padding: 10px;
     width: 100%;
 }
 
 /* Styles for the score display */
-#score-display {
+#scoreDisplay {
     justify-content: space-between;
     display: flex;
     
 }
 
-.score-calculator {
+.scoreCalculator {
     text-align: center;
     font-size: 200%;
 }
 
-.score-text {
+.scoreText {
     text-align: center;
 }
 
-#status-bar {
+#statusBar {
     width: 400px;
     height: 25px;
     margin-top: 10px;
@@ -114,7 +114,7 @@ h1 {
     overflow: hidden;
 }
 
-#status-bar-full {
+#statusBarFull {
     height: 25px;
     background: yellow;
     width: 0%;
