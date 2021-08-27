@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 //Variable and question structure//
 
 const inquiry = document.querySelector('#inquiry');
@@ -6,13 +8,13 @@ const status = document.querySelector('#status');
 const resultNumber = document.querySelector('#result');
 const statusBarFull = document.querySelector('#statusBarFull');
 const answers = document.querySelectorAll('.answerBox');
-
+//initialize ganme variables//
 let currentInquiry = {};
 let correctAnswers = true;
 let result = 0;
 let inquiryCount = 0;
 let availableInquiries = [];
-
+//create list of questions and answers
 let inquiries = [
     {
         inquiry: 'What is 1 + 1?',
@@ -73,6 +75,7 @@ let inquiries = [
     },
     
 ];
+//set max score and max questions//
 
 const MAX_SCORE = 200;
 const MAX_INQUIRIES = 5;
@@ -85,19 +88,19 @@ startGame = () => {
     availableInquiries = [...inquiries];
     getNewInquiry();
 }
-
+//get new questions function//
 getNewInquiry = () => {
     if(availableInquiries.length === 0 || inquiryCount > MAX_INQUIRIES) {
         localStorage.setItem('mostRecentScore', result);
 
         return window.location.assign('/finishedquiz.html');
     }
-
+//question count to html//
     inquiryCount++;
     status.innerText = `Inquiry ${inquiryCount} of ${MAX_INQUIRIES}`;
     statusBarFull.style.width = `${(inquiryCount/MAX_INQUIRIES) * 100}%`;
 
-  
+  //get random question from available questions//
     const inquiryNumber = Math.floor(Math.random() * availableInquiries.length);
     currentInquiry = availableInquiries[inquiryNumber];
     inquiry.innerText = currentInquiry.inquiry;
@@ -116,7 +119,7 @@ getNewInquiry = () => {
     
 };
 
- //event listener functionality for possible solutions in the quiz//
+ //event listener functionality for detyermining the right or wrong answer//
 
  solutions.forEach(solution => {
     solution.addEventListener('click', e => {
@@ -131,7 +134,7 @@ getNewInquiry = () => {
         if(styleToApply === 'right') {
             incrementScore(MAX_SCORE)
         }
-
+// apply right or wrong css styling to users pick//
         selectedSolution.parentElement.classList.add(styleToApply);
         
         setTimeout(() => {
@@ -139,7 +142,7 @@ getNewInquiry = () => {
            getNewInquiry();
   
         }, 1000)
-
+//
        if(inquiryCount == 4) {
            
            myFunction() 
