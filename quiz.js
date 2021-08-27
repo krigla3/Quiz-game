@@ -1,16 +1,18 @@
+//Variable and question structure//
+
 const inquiry = document.querySelector('#inquiry');
 const solutions = Array.from(document.querySelectorAll('.solutionData'));
 const status= document.querySelector('#status');
 const resultNumber = document.querySelector('#result');
-const progressBarFull = document.querySelector('#statusBarFull');
+const statusBarFull = document.querySelector('#statusBarFull');
 
 let currentInquiry = {}
 let correctAnswers = true
 let result = 0
-let inquiryNumber = 0
+let inquirycount = 0
 let availableInquiries= []
 
-let questions = [
+let inquiries = [
     {
         inquiry: 'What is 1 + 1?',
         solution1: '1',
@@ -46,3 +48,25 @@ let questions = [
     }
 ]
 
+const MAX_SCORE = 1000
+const MAX_INQUIRIES = 5
+
+//start game and next question functionality//
+
+startGame = () => {
+    inquirycount = 0
+    result = 0
+    availableInquiries = [...inquiries]
+    getNewInquiry()
+}
+
+getNewInquiry = () => {
+    if(vailableInquiries.length === 0 || inquirycount > MAX_INQUIRIES) {
+        localStorage.setItem('mostRecentScore', result)
+
+    }
+
+    inquirycount++
+    status.innerText = `Inquiry ${inquirycount} of ${MAX_INQUIRIES}`
+    statusBarFull.style.width = `${(nquirycount/MAX_INQUIRIES) * 100}%`
+    
