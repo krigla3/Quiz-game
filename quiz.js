@@ -69,4 +69,19 @@ getNewInquiry = () => {
     inquirycount++
     status.innerText = `Inquiry ${inquirycount} of ${MAX_INQUIRIES}`
     statusBarFull.style.width = `${(nquirycount/MAX_INQUIRIES) * 100}%`
-    
+
+  
+    const inquiryNumber = Math.floor(Math.random() * availableInquiries.length)
+    currentQuestion = availableInquiries[inquiryNumber]
+    inquiry.innerText = currentInquiry.inquiry
+
+    solutions.forEach(solution => {
+        const number = solution.dataset['number']
+        solution.innerText = currentQuestion['solution' + number]
+    })
+
+    availableInquiries.splice(inquiryNumber, 1)
+
+    orrectAnswers = true
+}
+
