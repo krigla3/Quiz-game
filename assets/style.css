@@ -92,10 +92,12 @@ h1 {
 /* Styling for right and wrong selection*/
 
 .right {
+    
     background: yellow;
 }
 
 .wrong{
+   
     background: red;
 }
 
