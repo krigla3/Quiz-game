@@ -8,13 +8,19 @@ const status = document.querySelector('#status');
 const resultNumber = document.querySelector('#result');
 const statusBarFull = document.querySelector('#statusBarFull');
 const answers = document.querySelectorAll('.answerBox');
-//initialize ganme variables//
+
+
+// Initialize ganme variables//
+
 let currentInquiry = {};
 let correctAnswers = true;
 let result = 0;
 let inquiryCount = 0;
 let availableInquiries = [];
-//create list of questions and answers
+
+
+// List of questions and answers
+
 let inquiries = [
     {
         inquiry: 'What is Scooby Doo’s full name?',
@@ -193,15 +199,20 @@ startGame = () => {
     availableInquiries = [...inquiries];
     getNewInquiry();
 };
-//get new questions function//
+
+
+// Function for getting new questions and question insert and answer to the quiz page. //
 getNewInquiry = () => {
     
-//question count to html//
+    
+// Question count to html//
+
     inquiryCount++;
     status.innerText = `Inquiry ${inquiryCount} of ${MAX_INQUIRIES}`;
     statusBarFull.style.width = `${(inquiryCount/MAX_INQUIRIES) * 100}%`;
 
-  //get random question from available questions//
+// Obtain a random question from available questions.//
+
     const inquiryNumber = Math.floor(Math.random() * availableInquiries.length);
     currentInquiry = availableInquiries[inquiryNumber];
     inquiry.innerText = currentInquiry.inquiry;
@@ -220,7 +231,7 @@ getNewInquiry = () => {
     
 };
 
- //event listener functionality for detyermining the right or wrong answer//
+// Apply styling on the answer depending if it is true or false.//
 
  solutions.forEach(solution => {
     solution.addEventListener('click', e => {
@@ -235,7 +246,7 @@ getNewInquiry = () => {
         if(styleToApply === 'right') {
             incrementScore(MAX_SCORE);
         }
-// apply right or wrong css styling to users pick//
+// Apply css styling for right or wrong question depending on users pick.//
         selectedSolution.parentElement.classList.add(styleToApply);
         
         setTimeout(() => {
@@ -243,7 +254,10 @@ getNewInquiry = () => {
            getNewInquiry();
   
         }, 1000);
-//
+
+
+// Onnce inquiry count is 5, quiz ends.//
+
        if(inquiryCount == 5) {
            
            endGame();
