@@ -430,11 +430,16 @@ body {
         margin-top: 50px;
         float: left;
     }
-    
-    .box > div { 
-        margin-left: 50px;
-    }
 
+}
+
+/* Intro page heading styling for screens under 380px */  
+
+@media screen and (max-width: 380px) {
+
+    h2 {
+        font-size: 70%;
+    }
 
 }
 }
