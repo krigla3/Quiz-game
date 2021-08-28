@@ -12,7 +12,17 @@ body {
     color: white;
 }
 
-h1 { 
+.intro-text {
+    font-size: 80%;
+    text-align: center;
+}
+
+#inquiry { 
+    margin-top: 150px;
+    margin-bottom: 100px;
+    padding-left: 100px;
+    
+    
     font-size: 150%;
     color: white;
     
@@ -66,7 +76,7 @@ h1 {
     display: flex;
     margin: 0 auto;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 0px;
     width: 70%;
     border-radius: 20px;
     background:green;
@@ -102,10 +112,23 @@ h1 {
 }
 
 /* Styles for the score display */
-#scoreDisplay {
+
+.scoreContainer {
+    margin: 0 auto;
+    height: 200px;
+}
+
+
+.scoreContainer2 {
+    margin: 0 auto;
+    height: 200px;
+}
+
+
+.scoreDisplay {
     justify-content: space-between;
     display: flex;
-    
+    direction: column;
 }
 
 .scoreCalculator {
@@ -118,7 +141,7 @@ h1 {
 }
 
 #statusBar {
-    width: 400px;
+    width: 350px;
     height: 25px;
     margin-top: 10px;
     border-radius: 10px;
@@ -132,3 +155,28 @@ h1 {
     width: 0%;
 }
 
+
+
+@media screen and (max-width: 625px) {
+
+    .scoreContainer {
+        margin: 0 auto;
+        height: 100px;
+        
+      
+    }
+
+    .scoreContainer2 {
+        clear: left;
+        margin: 0 auto;
+        height: 200px;
+    }
+
+    .scoreDisplay {
+        display: flex;
+        direction: column;
+    }
+    
+    
+    
+}
