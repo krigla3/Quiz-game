@@ -275,7 +275,7 @@ incrementScore = num => {
 function endGame() {
     localStorage.setItem('mostRecentScore', result);
 
-    return window.location.assign('/finishedquiz.html');
+    return window.location.assign('finishedquiz.html');
   }
 
 startGame();
