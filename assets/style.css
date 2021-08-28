@@ -15,6 +15,9 @@ body {
 .intro-text {
     font-size: 80%;
     text-align: center;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #inquiry { 
@@ -28,7 +31,6 @@ body {
 
 .box {
     width: 100%;
-    height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +102,6 @@ body {
 /* Styling for right and wrong selection*/
 
 .right {
-    
     background: yellow;
 }
 
@@ -126,7 +127,6 @@ body {
 .scoreDisplay {
     justify-content: space-between;
     display: flex;
-    direction: column;
 }
 
 .scoreCalculator {
@@ -153,15 +153,25 @@ body {
     width: 0%;
 }
 
-
+/* Styles for smaller screen sizes*/
 
 @media screen and (max-width: 625px) {
 
+/* Intro page styling for smaller screens*/
+
+    .intro-text {
+        font-size: 40%;
+    }    
+
+    h2 {
+        font-size: 80%;
+    }
+
+
+/* Main quiz page styling for smaller screens*/
     .scoreContainer {
         margin: 0 auto;
         height: 100px;
-        
-      
     }
 
     .scoreContainer2 {
@@ -184,6 +194,5 @@ body {
         margin: 0;
     }
     
-    
-    
+   
 }

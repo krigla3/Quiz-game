@@ -192,7 +192,7 @@ startGame = () => {
     result = 0;
     availableInquiries = [...inquiries];
     getNewInquiry();
-}
+};
 //get new questions function//
 getNewInquiry = () => {
     
@@ -211,7 +211,7 @@ getNewInquiry = () => {
         solution.innerText =  currentInquiry['solution' + number];
 
         
-    })
+    });
 
     availableInquiries.splice(inquiryNumber, 1);
 
@@ -224,16 +224,16 @@ getNewInquiry = () => {
 
  solutions.forEach(solution => {
     solution.addEventListener('click', e => {
-        if(!correctAnswers) return
+        if(!correctAnswers) return;
 
-        correctAnswers  = false
-        const selectedSolution = e.target
+        correctAnswers  = false;
+        const selectedSolution = e.target;
         const selectedAnswer = selectedSolution.dataset['number'];
 
         let styleToApply = selectedAnswer ==  currentInquiry.answer ? 'right' : 'wrong';
 
         if(styleToApply === 'right') {
-            incrementScore(MAX_SCORE)
+            incrementScore(MAX_SCORE);
         }
 // apply right or wrong css styling to users pick//
         selectedSolution.parentElement.classList.add(styleToApply);
@@ -242,21 +242,21 @@ getNewInquiry = () => {
            selectedSolution.parentElement.classList.remove(styleToApply);
            getNewInquiry();
   
-        }, 1000)
+        }, 1000);
 //
-       if(inquiryCount == 4) {
+       if(inquiryCount == 5) {
            
-           endGame() 
+           endGame();
        }
-    })
-})
+    });
+});
 
 incrementScore = num => {
     result +=num;
     resultNumber.innerText = result;
 
     
-}
+};
 
 function endGame() {
     localStorage.setItem('mostRecentScore', result);
@@ -264,7 +264,7 @@ function endGame() {
     return window.location.assign('/finishedquiz.html');
   }
 
-startGame()
+startGame();
 
 
 
