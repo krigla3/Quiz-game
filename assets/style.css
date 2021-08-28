@@ -30,11 +30,13 @@ body {
 }
 
 .box {
+    padding-top: 150px;
+    padding-left: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 aut0;
 }
 
 .home {
@@ -155,7 +157,7 @@ body {
 
 /* Styles for smaller screen sizes*/
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 650px) {
 
 /* Intro page styling for smaller screens*/
 
@@ -169,6 +171,12 @@ body {
 
 
 /* Main quiz page styling for smaller screens*/
+
+
+    #inquiry { 
+        font-size: 120%;
+    }
+
     .scoreContainer {
         margin: 0 auto;
         height: 100px;
@@ -193,6 +201,15 @@ body {
     .scoreText {
         margin: 0;
     }
+
+    .navigation {
+        margin-top: 50px;
+        clear: both;
+    }
     
-   
+    #navigation {
+        margin-top: 50px;
+        float: left;
+        margin: 0 aut0;
+    }
 }
