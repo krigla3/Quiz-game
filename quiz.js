@@ -17,53 +17,53 @@ let availableInquiries = [];
 //create list of questions and answers
 let inquiries = [
     {
-        inquiry: 'What is 1 + 1?',
-        solution1: '1',
-        solution2: '2',
-        solution3: '21',
-        solution4: '17',
+        inquiry: 'What is Scooby Doo’s full name?',
+        solution1: 'Vivian Doolally',
+        solution2: 'Scoobert Doo',
+        solution3: 'Clyde Wangsbottom',
+        solution4: 'Rodney Toothwiggle',
         answer: 2,
     },
     {
         inquiry:
-            "What is 1 + 2?",
-        solution1: "3",
-        solution2: "2",
-        solution3: "1",
-        solution4: "4",
+            "What is the collective noun for a group of unicorns?",
+        solution1: " A blessing",
+        solution2: " An annoyance",
+        solution3: "A scrumpy",
+        solution4: "A unibomber",
         answer: 1,
     },
     {
-        inquiry: "What is 1 + 3?",
-        solution1: "1",
-        solution2: "2",
-        solution3: "4",
-        solution4: "3",
+        inquiry: "Native to the Caribbean, what sort of animal is the mountain chicken?",
+        solution1: "Beetle",
+        solution2: "Fox",
+        solution3: "Frog",
+        solution4: "Wild goose",
         answer: 3,
     },
     {
-        inquiry: "What is 1 + 4?",
-        solution1: "5",
-        solution2: "4",
-        solution3: "2",
-        solution4: "1",
+        inquiry: "It is estimated that millions of trees world wide are accidentally planted by which species with bad memories?",
+        solution1: "Squirrels",
+        solution2: "Bats",
+        solution3: "Chickens",
+        solution4: "Killer whales",
         answer: 1,
     },
     {
-        inquiry: "What is 1 + 5?",
-        solution1: "6",
-        solution2: "5",
-        solution3: "4",
-        solution4: "3",
+        inquiry: "Guinness Brewery in Dublin has a .... year lease on it's property.",
+        solution1: "9000",
+        solution2: "5700",
+        solution3: "250",
+        solution4: "9",
         answer: 1,
     },
     {
-        inquiry: "What is 1 + 6?",
-        solution1: "7",
-        solution2: "5",
-        solution3: "4",
-        solution4: "3",
-        answer: 1,
+        inquiry: "Due to its gravitational pull, what generally happens to the human body when the moon is directly overhead?",
+        solution1: "You will walk sideways",
+        solution2: "You will howl at the moon",
+        solution3: "You will weigh less",
+        solution4: "You will be 3 inches taller",
+        answer: 4,
     },
     {
         inquiry: "What is 1 + 7?",
@@ -71,8 +71,41 @@ let inquiries = [
         solution2: "5",
         solution3: "4",
         solution4: "3",
-        answer: 1,
+        answer: 1,    
     },
+    {
+        inquiry: "Where is Newgrange - a 5000 year old Passage Tomb located?",
+        solution1: "France",
+        solution2: "Ireland",
+        solution3: "Scotland",
+        solution4: "England",
+        answer: 2,
+    },
+    {
+        inquiry: "What is 1 + 7?",
+        solution1: "8",
+        solution2: "5",
+        solution3: "4",
+        solution4: "3",
+        answer: 1,   
+    },
+    {
+        inquiry: "What is 1 + 7?",
+        solution1: "8",
+        solution2: "5",
+        solution3: "4",
+        solution4: "3",
+        answer: 1,   
+    },
+    {
+        inquiry: "What is 1 + 7?",
+        solution1: "8",
+        solution2: "5",
+        solution3: "4",
+        solution4: "3",
+        answer: 1,   
+    },
+
     
 ];
 //set max score and max questions//
@@ -90,11 +123,7 @@ startGame = () => {
 }
 //get new questions function//
 getNewInquiry = () => {
-    if(availableInquiries.length === 0 || inquiryCount > MAX_INQUIRIES) {
-        localStorage.setItem('mostRecentScore', result);
-
-        return window.location.assign('/finishedquiz.html');
-    }
+    
 //question count to html//
     inquiryCount++;
     status.innerText = `Inquiry ${inquiryCount} of ${MAX_INQUIRIES}`;
@@ -145,7 +174,7 @@ getNewInquiry = () => {
 //
        if(inquiryCount == 4) {
            
-           myFunction() 
+           endGame() 
        }
     })
 })
@@ -157,9 +186,10 @@ incrementScore = num => {
     
 }
 
-function myFunction() {
-    alert("Final score " + result) 
+function endGame() {
+    localStorage.setItem('mostRecentScore', result);
 
+    return window.location.assign('/finishedquiz.html');
   }
 
 startGame()

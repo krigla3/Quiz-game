@@ -20,9 +20,7 @@ body {
 #inquiry { 
     margin-top: 150px;
     margin-bottom: 100px;
-    padding-left: 100px;
-    
-    
+    margin-left: 50px;
     font-size: 150%;
     color: white;
     
@@ -174,7 +172,16 @@ body {
 
     .scoreDisplay {
         display: flex;
-        direction: column;
+        flex-direction: column;
+    }
+
+    .scoreCalculator {
+        margin: 0;
+
+    }
+
+    .scoreText {
+        margin: 0;
     }
     
     
