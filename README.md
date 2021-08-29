@@ -28,7 +28,7 @@ The quiz is deliberately simplistic with a clean, uniform look. My focus was on 
 
     ![question](https://github.com/krigla3/Quiz-game/blob/main/docs/question.jpg)
 
-    * The questions are displayed on a similar screen to the landing page. Questions are displayed in white text with solution options contained in green boxes. When the user hovers over a solution it will pop out. A score counter runs in the bottom left of the screen and a quiz status bar updates in the bottom right of the screen. The questions run intuitively when the user selects an answer.
+    * The questions are displayed on a similar screen to the landing page. Questions are displayed in white text with solution options contained in green boxes. When the user hovers over a solution it will pop out. A score counter runs in the bottom left of the screen and a quiz status bar updates in the bottom right of the screen. The questions run intuitively when the user selects an answer. In total there are 20 available questions, however the user will get the chance to answer 5 questions per game.
 
 * Score result
 
