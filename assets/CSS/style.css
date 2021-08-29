@@ -371,67 +371,7 @@ body {
     width: 0%;
 }
 
-/* Styles for smaller screen sizes*/
 
-@media screen and (max-width: 650px) {
-
-/* Intro page styling for smaller screens*/
-
-    .intro-text {
-        font-size: 40%;
-    }    
-
-    h2 {
-        font-size: 80%;
-    }
-
-
-/* Main quiz page styling for smaller screens*/
-
-
-    #inquiry { 
-        font-size: 120%;
-    }
-
-    .scoreContainer {
-        margin: 0 auto;
-        height: 100px;
-    }
-
-    .scoreContainer2 {
-        clear: left;
-        margin: 0 auto;
-        height: 200px;
-    }
-
-    .scoreDisplay {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .scoreCalculator {
-        margin: 0;
-
-    }
-
-    .scoreText {
-        margin: 0;
-    }
-
-
-/* End page styling*/  
-
-    .navigation {
-        margin-top: 50px;
-        clear: both;
-    }
-    
-    #navigation {
-        margin-top: 50px;
-        float: left;
-    }
-
-}
 
 /* Intro page heading styling for screens under 380px */  
 
