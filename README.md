@@ -120,6 +120,16 @@ Quiz game site was deployed to GitHub Pages by following the below steps:
         1. All buttons working and directing user to the correct pages.
         1. Score tracker and status bar update correctly.
 
+* Functionality testing done on different browsers (Google Chrome, Microsoft Edge) as well as different mobile devices. Samsung S20, Samsung S21, Huawei P9 lite.
+
+    * Test: 
+        1. Open the website with each of the mentioned devices.
+        1. Click on all navigation items (Play  button, choice buttons, Play again button, Go home button) one by one to make sure the buttons are displaying in the correct colour, that the correct score is tracked and that they lead the user to the correct parts of the quiz. 
+        1. Monitor the score tracker and status bar through question selection for errors.
+    * Result:
+        1. All buttons working and directing user to the correct pages.
+        1. Score tracker and status bar update correctly.
+
 ## Issues/Resolutions?
 * Issue - On devices with small screens, the user has to scroll in order to see all of the quiz interface, especially where questions are longer. 
     Resolution - Update the aesthetic for smaller screens so it redueces the need to scroll on the page, with all quiz items displaying in the screen area. 
