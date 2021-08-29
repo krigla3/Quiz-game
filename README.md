@@ -81,7 +81,7 @@ The quiz is deliberately simplistic with a clean, uniform look. My focus was on 
 
 ## Deployment
 
-Wipeout Surf Camp was deployed to GitHub Pages by following the below steps:
+Quiz game site was deployed to GitHub Pages by following the below steps:
 
 1. Navigate to the ["Quiz-Game" repository](https://github.com/krigla3/Quiz-game) on GitHub.
 1. Navigate to the 'Settings' tab.
