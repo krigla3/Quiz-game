@@ -114,7 +114,7 @@ Quiz game site was deployed to GitHub Pages by following the below steps:
 
     * Test: 
         1. Open the website with each of the mentioned devices.
-        1. Click on all navigation items (Play  button, choice buttons, Play again button, Go home button) one by one to make sure the buttons are displaying in the correct colour and correct size, that the correct score is tracked and that they lead the user to the correct parts of the quiz. 
+        1. Click on all navigation items (Play  button, choice buttons, Play again button, Go home button) one by one to make sure the buttons are displaying in the correct     colour and correct size, that the correct score is tracked and that they lead the user to the correct parts of the quiz. 
         1. Monitor the score tracker and status bar through question selection for errors.
     * Result:
         1. All buttons working and directing user to the correct pages.
