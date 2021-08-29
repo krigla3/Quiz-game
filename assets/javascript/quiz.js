@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-//Variable and question structure//
+//Variable and question structure. //
 
 const inquiry = document.querySelector('#inquiry');
 const solutions = Array.from(document.querySelectorAll('.solutionData'));
@@ -10,7 +10,7 @@ const statusBarFull = document.querySelector('#statusBarFull');
 const answers = document.querySelectorAll('.answerBox');
 
 
-// Initialize ganme variables//
+// Initialize ganme variables. //
 
 let currentInquiry = {};
 let correctAnswers = true;
@@ -19,7 +19,7 @@ let inquiryCount = 0;
 let availableInquiries = [];
 
 
-// List of questions and answers
+// List of questions and answers. //
 
 let inquiries = [
     {
@@ -186,12 +186,12 @@ let inquiries = [
 
     
 ];
-//set max score and max questions//
+//set max score and max questions. //
 
 const MAX_SCORE = 200;
 const MAX_INQUIRIES = 5;
 
-//start game and next question functionality//
+//start game and next question functionality. //
 
 startGame = () => {
     inquiryCount = 0;
@@ -205,7 +205,7 @@ startGame = () => {
 getNewInquiry = () => {
     
     
-// Question count to html//
+// Question count to html. //
 
     inquiryCount++;
     status.innerText = `Inquiry ${inquiryCount} of ${MAX_INQUIRIES}`;
@@ -246,7 +246,7 @@ getNewInquiry = () => {
         if(styleToApply === 'right') {
             incrementScore(MAX_SCORE);
         }
-// Apply css styling for right or wrong question depending on users pick.//
+// Apply css styling for right or wrong question depending on users pick. //
         selectedSolution.parentElement.classList.add(styleToApply);
         
         setTimeout(() => {
@@ -256,7 +256,7 @@ getNewInquiry = () => {
         }, 1000);
 
 
-// Onnce inquiry count is 5, quiz ends.//
+// Onnce inquiry count is 5, quiz ends. //
 
        if(inquiryCount == 5) {
            
@@ -275,7 +275,7 @@ incrementScore = num => {
 function endGame() {
     localStorage.setItem('mostRecentScore', result);
 
-    return window.location.assign('finishedquiz.html');
+    return window.location.assign('../../finishedquiz.html');
   }
 
 startGame();
